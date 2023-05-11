@@ -14,7 +14,13 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    const stringLower =  str.toLowerCase();
+    const newString = stringLower.split('');
+    if (newString.reverse().join('') === stringLower){
+        return true
+    } else {
+        return false
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
@@ -30,3 +36,5 @@ console.log(palindrome('привет')); // false
  * palindrome('О, лета тело!'); // true
  * 
 */
+
+//готово

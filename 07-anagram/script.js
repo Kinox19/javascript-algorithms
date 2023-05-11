@@ -5,14 +5,25 @@
  * Напишите функцию, проверяющую, являются ли две строки анаграммами друг друга
  * (регистр букв не имеет значения). Для простоты примите, что в этих строках
  * нет пробелов и знаков препинания.
- * 
+ *
 */
 
 function anagram(str1, str2) {
-    // Напишите код здесь
+    const firstString = str1.toLowerCase().split('');
+    const secondString = str2.toLowerCase().split('');
+    const sortedFirstString = firstString.sort();
+    const sortedSecondString = secondString.sort();
+    if (sortedFirstString.toString() === sortedSecondString.toString()){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
-
+console.log(anagram('debit card', 'bad credit'));
 console.log(anagram('finder', 'Friend')); // true
 console.log(anagram('hello', 'bye')); // false
+
+
+//не проходит последний тест, но в целом работает, тестировал на разных примерах

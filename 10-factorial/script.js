@@ -8,7 +8,10 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+    let result = 1;
+    for (let i = 1; i <= n ; i++){
+        result *= i;
+    } return result
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
@@ -16,3 +19,5 @@ function factorial(n) {
 console.log(factorial(0)); // 1
 console.log(factorial(1)); // 1
 console.log(factorial(6)); // 720
+
+//готово
